@@ -1,6 +1,6 @@
 <template>
   <v-navigation-drawer
-    width="200"
+    width="250"
     fixed
     app
     class="elevation-4"

@@ -18,5 +18,16 @@ module.exports = function () {
         county: faker.address.county(),
       };
     }),
+    analysisData: _.times(15, function () {
+      return {
+        name: faker.address.city(),
+        KPM25: faker.random.number(),
+        KPM10: faker.random.number(),
+        SO2: faker.random.number(),
+        NO2: faker.random.number(),
+        O3: faker.random.number(),
+        CO: faker.random.number(),
+      };
+    }),
   };
 };
