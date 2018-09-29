@@ -37,10 +37,10 @@
             title: '大气实时监测分析',
             data: [
               {
-                icon: 'assignment', title: '实时动态',
+                icon: 'assignment', title: '实时动态', route: { name: 'realTimeDynamic' },
               },
               {
-                icon: 'call_to_action', title: '实时数据',
+                icon: 'call_to_action', title: '实时数据', route: { name: 'realTimeData' },
               },
             ],
           },
