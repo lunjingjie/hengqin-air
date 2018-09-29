@@ -29,5 +29,17 @@ module.exports = function () {
         CO: faker.random.number(),
       };
     }),
+    analysisChart: _.times(1, function () {
+      const arr = [];
+      for (let i = 0; i < 30; i += 1) {
+        arr.push({
+          DataValue: faker.random.number(),
+          Datatime: faker.date,
+        });
+      }
+      return {
+        KPM25: arr,
+      };
+    }),
   };
 };

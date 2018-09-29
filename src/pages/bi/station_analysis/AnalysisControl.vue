@@ -4,7 +4,18 @@
       <v-layout row justify-left wrap>
         <v-flex xs12 sm6 md2 order-md3 order-sm2>
           <v-select :items="states"
-                    v-model="type"
+                    v-model="doneType"
+                    cache-items
+                    class="py-1 px-2"
+                    hide-details
+                    slot="activator"
+                    color="info"
+                    prepend-icon="mdi-bus">
+          </v-select>
+        </v-flex>
+        <v-flex xs12 sm6 md2 order-md3 order-sm2>
+          <v-select :items="tableTypeArr"
+                    v-model="doneTableType"
                     cache-items
                     class="py-1 px-2"
                     hide-details
@@ -60,16 +71,24 @@
 <script>
   export default {
     name: 'AnalysisControl',
-    props: ['date', 'month'],
+    props: ['date', 'month', 'tableType', 'type'],
     data() {
       return {
-        type: '日',
         states: ['日', '月'],
+        tableTypeArr: ['监测值表', 'IAQI表'],
         menu: false,
         menu1: false,
       };
     },
     computed: {
+      doneType: {
+        get() {
+          return this.type;
+        },
+        set(val) {
+          this.$emit('update:type', val);
+        },
+      },
       doneDate: {
         get() {
           return this.date;
@@ -84,6 +103,14 @@
         },
         set(val) {
           this.$emit('update:month', val);
+        },
+      },
+      doneTableType: {
+        get() {
+          return this.tableType;
+        },
+        set(val) {
+          this.$emit('update:tableType', val);
         },
       },
     },
