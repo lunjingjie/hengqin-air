@@ -6,6 +6,11 @@ import StationAnalysis from '@/pages/bi/station_analysis/Analysis';
 /* BI->趋势分析 */
 import TrendAnalysis from '@/pages/bi/trend_analysis/TrendAnalysis';
 
+/* 实时模块 -> 数值地图 */
+import realTimeData from '@/pages/realTime/realTimeData/realTimeData';
+/* 实时模块 -> 实时监控表 */
+import realTimeDynamic from '@/pages/realTime/realTimeDynamic/realTimeDynamic';
+
 Vue.use(Router);
 
 export default new Router({
@@ -24,6 +29,16 @@ export default new Router({
       path: '/bi/trend',
       name: 'TrendAnalysis',
       component: TrendAnalysis,
+    },
+    {
+      path: '/realTime/realTimeData',
+      name: 'realTimeData',
+      component: realTimeData,
+    },
+    {
+      path: '/realTime/realTimeDynamic',
+      name: 'realTimeDynamic',
+      component: realTimeDynamic,
     },
   ],
 });
