@@ -6,14 +6,14 @@
           <v-layout>
             <v-flex @click="changeType">
               <v-card hover tile style="width: 50px; height: 30px; text-align: center; line-height: 30px;"
-                      :class="{ reportStyle: istrue === 'day' }"
+                      :class="{ reportStyle: istrue1 === 'day' }"
               >
                 日统计
               </v-card>
             </v-flex>
             <v-flex @click="changeType1">
               <v-card hover tile style="width: 50px; height: 30px; text-align: center; line-height: 30px;"
-                      :class="{ reportStyle: istrue === 'month' }"
+                      :class="{ reportStyle: istrue1 === 'month' }"
               >
                 月统计
               </v-card>
@@ -75,10 +75,9 @@
 <script>
   export default {
     name: 'TrendAnalysisControl',
-    props: ['param', 'station', 'stationArr', 'paramArr', 'param1', 'station1', 'stationArr1', 'paramArr1', 'showControl'],
+    props: ['param', 'station', 'stationArr', 'paramArr', 'param1', 'station1', 'stationArr1', 'paramArr1', 'showControl', 'istrue1'],
     data() {
       return {
-        istrue: 'day',
       };
     },
     computed: {
@@ -117,10 +116,10 @@
     },
     methods: {
       changeType() {
-        this.istrue = 'day';
+        this.$emit('update:istrue1', 'day');
       },
       changeType1() {
-        this.istrue = 'month';
+        this.$emit('update:istrue1', 'month');
       },
     },
   };

@@ -41,5 +41,45 @@ module.exports = function () {
         KPM25: arr,
       };
     }),
+    rowChart: _.times(1, function () {
+      const arr = [];
+      for (let i = 0; i < 30; i += 1) {
+        arr.push({
+          DataValue: faker.random.number(),
+          Datatime: faker.date,
+        });
+      }
+      const arr1 = [];
+      for (let i = 0; i < 30; i += 1) {
+        arr1.push({
+          DataValue: faker.random.number(),
+          Datatime: faker.date,
+        });
+      }
+      return {
+        A站点: arr,
+        B站点: arr1,
+      };
+    }),
+    columnChart: _.times(1, function () {
+      const arr = [];
+      for (let i = 0; i < 30; i += 1) {
+        arr.push({
+          DataValue: faker.random.number(),
+          Datatime: faker.date,
+        });
+      }
+      const arr1 = [];
+      for (let i = 0; i < 30; i += 1) {
+        arr1.push({
+          DataValue: faker.random.number(),
+          Datatime: faker.date,
+        });
+      }
+      return {
+        KPM25: arr,
+        KPM10: arr1,
+      };
+    }),
   };
 };

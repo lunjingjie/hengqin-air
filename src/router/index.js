@@ -5,6 +5,8 @@ import Login from '@/pages/user/Login';
 import StationAnalysis from '@/pages/bi/station_analysis/Analysis';
 /* BI->趋势分析 */
 import TrendAnalysis from '@/pages/bi/trend_analysis/TrendAnalysis';
+/* BI->空气质量统计分析 */
+import AirAnalysis from '@/pages/bi/airquality_analysis/AirAnalysis';
 
 /* 实时模块 -> 数值地图 */
 import realTimeData from '@/pages/realTime/realTimeData/realTimeData';
@@ -39,6 +41,11 @@ export default new Router({
       path: '/realTime/realTimeDynamic',
       name: 'realTimeDynamic',
       component: realTimeDynamic,
+    },
+    {
+      path: '/bi/quality',
+      name: 'AirAnalysis',
+      component: AirAnalysis,
     },
   ],
 });

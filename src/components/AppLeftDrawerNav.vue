@@ -54,7 +54,7 @@
                 icon: 'call_to_action', title: '污染物趋势分析', route: { name: 'TrendAnalysis' },
               },
               {
-                icon: 'assignment', title: '空气质量统计分析',
+                icon: 'assignment', title: '空气质量统计分析', route: { name: 'AirAnalysis' },
               },
               {
                 icon: 'call_to_action', title: '自画像报告功能',
