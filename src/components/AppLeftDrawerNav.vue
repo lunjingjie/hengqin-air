@@ -57,7 +57,7 @@
                 icon: 'assignment', title: '空气质量统计分析', route: { name: 'AirAnalysis' },
               },
               {
-                icon: 'call_to_action', title: '自画像报告功能',
+                icon: 'call_to_action', title: '自画像报告功能', route: { name: 'ReportAnalysis' },
               },
             ],
           },

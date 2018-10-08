@@ -75,8 +75,8 @@
             value: 'CO',
           },
           {
-            text: '03',
-            value: '03',
+            text: 'O3',
+            value: 'O3',
           },
         ],
         station1: 'A站点',
@@ -104,8 +104,8 @@
             value: 'CO',
           },
           {
-            text: '03',
-            value: '03',
+            text: 'O3',
+            value: 'O3',
           },
         ],
         // chart

@@ -7,6 +7,8 @@ import StationAnalysis from '@/pages/bi/station_analysis/Analysis';
 import TrendAnalysis from '@/pages/bi/trend_analysis/TrendAnalysis';
 /* BI->空气质量统计分析 */
 import AirAnalysis from '@/pages/bi/airquality_analysis/AirAnalysis';
+/* BI->自画像报告 */
+import ReportAnalysis from '@/pages/bi/report_analysis/Report';
 
 /* 实时模块 -> 数值地图 */
 import realTimeData from '@/pages/realTime/realTimeData/realTimeData';
@@ -46,6 +48,11 @@ export default new Router({
       path: '/bi/quality',
       name: 'AirAnalysis',
       component: AirAnalysis,
+    },
+    {
+      path: '/bi/report',
+      name: 'ReportAnalysis',
+      component: ReportAnalysis,
     },
   ],
 });
